@@ -33,8 +33,8 @@
             <div v-if="liturgicalInfo" class="bg-white shadow-lg rounded-lg p-6 mt-4">
                 <h2 class="text-2xl font-semibold text-blue-600 mb-4">Informations liturgiques</h2>
                 <ul class="list-disc list-inside mb-4 text-gray-800">
-                    <li>Temps liturgique : {{ liturgicalInfo.tempsLiturgique }}</li>
-                    <li>Fête : {{ liturgicalInfo.fete }}</li>
+                    <li v-if="liturgicalInfo.tempsLiturgique">Temps liturgique : {{ liturgicalInfo.tempsLiturgique }}</li>
+                    <li v-if="liturgicalInfo.fete">Fête : {{ liturgicalInfo.fete }}</li>
                 </ul>
             </div>
         </div>
